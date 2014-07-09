@@ -30,7 +30,6 @@ while [ $# -ge 1 ]; do
   esac
   shift
 done
-echo $NVIDIA_DRIVER
 
 # Check if current kernel is outdated
 CHECK_X8664=$(yum update --assumeno --downloadonly | grep kernel.x86_64)
