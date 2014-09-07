@@ -1,17 +1,21 @@
-import cPickle
-import cv2
+import cPickle as pickle
+import os
+import sys
+
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 import numpy as np
-import os
+import pandas as pd
 import scipy as sp
+import scipy.io
+import scipy.stats
 import skimage
-import sys
+import skimage.transform
+import skimage.io
+
+import cv2
 
 # The following lines call magic commands
-from IPython.core.interactiveshell import InteractiveShell
-get_ipython().run_line_magic(u"matplotlib", u"inline")
 get_ipython().run_line_magic(u"pdb", u"")
-
-# It allows to insert breakpoints as Tracer()()                                 
+# Insert breakpoints as breakpoint()() instead of Tracer()() 
 from IPython.core.debugger import Tracer as breakpoint
