@@ -1,0 +1,17 @@
+# Listing
+alias ls='ls -c --color=auto'
+alias la='ls -ac --color=auto'
+alias ll='ls -lah --color=auto'
+
+# Override -f
+alias cpf='\cp -v'
+alias mvf='\mv -v'
+alias rmf='rm -Rfv'
+
+# Admin
+alias df='df -h'
+alias du='du -h'
+
+if [ -z "$(vimx --version | grep "not found")" ]; then
+  alias vim="/usr/bin/vimx"
+fi

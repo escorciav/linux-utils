@@ -1,0 +1,26 @@
+# Format history
+export  HISTTIMEFORMAT="%d/%m/%y  %T  "
+
+# Avoid Gtk-WARNING **: cannot open display
+unset SSH_ASKPASS
+
+# User specific environment
+export PATH=$HOME/.local/bin:$HOME/local/bin:$PATH
+export LD_LIBRARY_PATH=/usr/local/lib:$HOME/local/lib:$LD_LIBRARY_PATH
+export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:$HOME/local/lib:$PKG_CONFIG_PATH
+# Cuda
+export PATH=/opt/cuda-5.5/bin:$PATH
+export LD_LIBRARY_PATH=/opt/cuda-5.5/lib64:$LD_LIBRARY_PATH
+
+# Python packages
+export PYTHONPATH="/usr/local/lib/python2.7:"\
+"/usr/local/lib/python2.7/site-packages"
+
+# Intel
+export MKL_DIR=/opt/intel/composer_xe_2013_sp1.2.144
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$MKL_DIR/compiler/lib/intel64:"\
+"$MKL_DIR/mkl/lib/intel64:$MKL_DIR/compiler/lib/ia32:"\
+"$MKL_DIR/mkl/lib/ia32:$DYLD_LIBRARY_PATH"
+export DYLD_LIBRARY_PATH="$MKL_DIR/compiler/lib/intel64:"\
+"$MKL_DIR/mkl/lib/intel64:$MKL_DIR/compiler/lib/ia32:"\
+"$MKL_DIR/mkl/lib/ia32:$DYLD_LIBRARY_PATH"
