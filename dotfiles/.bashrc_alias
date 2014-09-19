@@ -12,6 +12,6 @@ alias rmf='rm -Rfv'
 alias df='df -h'
 alias du='du -h'
 
-if [ -z "$(vimx --version | grep "not found")" ]; then
+if hash vimx 2>/dev/null; then
   alias vim="/usr/bin/vimx"
 fi
