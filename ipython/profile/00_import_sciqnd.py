@@ -5,6 +5,8 @@ import math
 import os
 import sys
 
+import cv2
+import h5py
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 import numpy as np
@@ -15,8 +17,6 @@ import scipy.stats
 import skimage
 import skimage.transform
 import skimage.io
-
-import cv2
 
 # The following lines call magic commands
 get_ipython().run_line_magic(u"pdb", u"")
