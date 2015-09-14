@@ -8,19 +8,22 @@ unset SSH_ASKPASS
 export PATH=$HOME/.local/bin:$HOME/local/bin:$PATH
 export LD_LIBRARY_PATH=/usr/local/lib:$HOME/local/lib:$LD_LIBRARY_PATH
 export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:$HOME/local/lib:$PKG_CONFIG_PATH
-# Cuda
+
+# GIT
+# Uncomment the following line if you have vimx
+#export GIT_EDITOR=vimx
+
+# CUDA
 export PATH=/opt/cuda-5.5/bin:$PATH
 export LD_LIBRARY_PATH=/opt/cuda-5.5/lib64:$LD_LIBRARY_PATH
 
-# Python packages
+# PYTHON
 export PYTHONPATH="/usr/local/lib/python2.7:"\
 "/usr/local/lib/python2.7/site-packages"
 
-# Intel
-export MKL_DIR=/opt/intel/composer_xe_2013_sp1.2.144
-export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$MKL_DIR/compiler/lib/intel64:"\
-"$MKL_DIR/mkl/lib/intel64:$MKL_DIR/compiler/lib/ia32:"\
-"$MKL_DIR/mkl/lib/ia32:$DYLD_LIBRARY_PATH"
-export DYLD_LIBRARY_PATH="$MKL_DIR/compiler/lib/intel64:"\
-"$MKL_DIR/mkl/lib/intel64:$MKL_DIR/compiler/lib/ia32:"\
-"$MKL_DIR/mkl/lib/ia32:$DYLD_LIBRARY_PATH"
+# OPENBLAS
+# Uncomment following lines to setup max number of threads by default
+export OPENBLAS_NUM_THREADS=48
+export GOTO_NUM_THREADS=48
+export OMP_NUM_THREADS=48
+
