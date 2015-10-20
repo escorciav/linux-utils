@@ -12,6 +12,7 @@ Bundle 'gmarik/vundle'
 " The bundles you install will be listed ere
 Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Bundle 'klen/python-mode'
+Bundle 'ervandew/supertab'
 
 " -- Useful settings --
 filetype plugin indent on
