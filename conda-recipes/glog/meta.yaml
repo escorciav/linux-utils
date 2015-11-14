@@ -1,0 +1,11 @@
+package:
+  name: glog
+  version: 0.3.4
+
+source:
+  git_url: https://github.com/google/glog.git
+  git_tag: v0.3.4
+
+about:
+  home: https://github.com/google/glog.git
+  summary: 'C++ implementation of the Google logging module'
