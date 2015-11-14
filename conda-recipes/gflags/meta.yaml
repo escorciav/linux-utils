@@ -1,0 +1,12 @@
+package:
+  name: gflags
+  version: 2.1.2
+
+source:
+  fn: v2.1.2.tar.gz
+  url: https://github.com/gflags/gflags/archive/v2.1.2.tar.gz
+  md5: ac432de923f9de1e9780b5254884599f
+
+about:
+  home: https://gflags.github.io/gflags/
+  summary: 'C++ library that implements commandline flags processing'

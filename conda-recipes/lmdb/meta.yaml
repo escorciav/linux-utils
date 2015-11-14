@@ -1,0 +1,11 @@
+package:
+  name: lmdb
+  version: 0.9.15
+
+source:
+  git_url: https://github.com/LMDB/lmdb.git
+  git_tag: LMDB_0.9.15
+
+about:
+  home: http://symas.com/mdb/
+  summary: 'LMDB, ultra-fast, ultra-compact key-value embedded data store'
