@@ -1,0 +1,23 @@
+#%Module1.0#####################################################################
+##
+## modules tools/cudnn/v2
+##
+## modulefiles/tools/cudnn/v2  Written by Victor Escorcia
+##
+proc ModulesHelp { } {
+                global version modroot
+
+                        puts stderr "tools/cudnn/v2 - sets the Environment for CUDNN v2"
+}
+
+module-whatis   "Sets the Environment for using CUDNN v2 headers and library"
+
+# for Tcl script use only
+set     topdir          /opt/cuda/cudnn-6.5-v2
+set     version         v2
+set     sys             linux86
+conflict tools/cudnn
+
+prepend-path    LD_LIBRARY_PATH $topdir
+prepend-path    INCDIR          $topdir
+prepend-path    INCLUDE         $topdir
