@@ -1,4 +1,10 @@
 # Set prompt title
 function set_title {
-   PROMPT_COMMAND="echo -ne \"\033]2;$1 (on $HOSTNAME)\007\""
+  PROMPT_COMMAND="echo -ne \"\033]2;$1 (on $HOSTNAME)\007\""
+}
+
+function backup_file {
+  if [ -f $1 ]; then
+    cp $1 $1.bk
+  fi
 }
