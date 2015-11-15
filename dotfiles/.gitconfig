@@ -1,0 +1,9 @@
+[user]
+        email = victor.escorcia@kaust.edu.sa
+        name = Victor Escorcia
+[color]
+        ui = yes
+[core]
+        editor = vim
+[push]
+        default = current
