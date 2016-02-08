@@ -19,5 +19,7 @@ set     sys             linux86
 conflict tools/cudnn
 
 prepend-path    LD_LIBRARY_PATH $topdir
+prepend-path    LIBRARY_PATH    $topdir
 prepend-path    INCDIR          $topdir
 prepend-path    INCLUDE         $topdir
+prepend-path    CPATH           $topdir
