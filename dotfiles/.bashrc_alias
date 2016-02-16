@@ -15,3 +15,6 @@ alias du='du -h'
 if hash vimx 2>/dev/null; then
   alias vim="/usr/bin/vimx"
 fi
+
+# Clean unused memory (root)
+alias clsmem='su -c "echo 3 > /proc/sys/vm/drop_caches"'
