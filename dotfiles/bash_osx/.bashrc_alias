@@ -1,0 +1,33 @@
+# Listing
+alias ls='ls -G'
+alias la='ls -aG'
+alias ll='ls -lahG'
+
+# Override -f
+alias cpf='\cp -v'
+alias mvf='\mv -v'
+alias rmf='rm -Rfv'
+
+# Admin
+alias df='df -h'
+alias du='du -h'
+
+# Lock
+alias lock='/System/Library/CoreServices/"Menu Extras"/User.menu/Contents/Resources/CGSession -suspend'
+
+# grep with color
+alias grep='grep --color=auto'
+
+# refresh shell
+alias reload='source ~/.bash_profile'
+
+# VIMX instead of VIM, usually with clipboard
+if hash vimx 2>/dev/null; then
+  alias vim="/usr/bin/vimx"
+fi
+
+# ldd equivalent on OSX
+alias ldd='otool -L'
+
+# Clean unused memory
+alias clsmem='sudo purge'
