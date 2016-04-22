@@ -1,0 +1,24 @@
+#%Module1.0#####################################################################
+##
+## modules tools/cnmem/v1
+##
+## modulefiles/tools/cnmem/v1  Written by Victor Escorcia
+##
+proc ModulesHelp { } {
+                global version modroot
+
+                        puts stderr "tools/cnmem/v1 - sets the Environment for CNMEM v1"
+}
+
+module-whatis   "Sets the Environment for using CNMEM v1 headers and library"
+
+# for Tcl script use only
+set     topdir          /opt/cuda/cnmem/
+set     version         v1
+set     sys             linux86
+
+prepend-path    LD_LIBRARY_PATH $topdir/lib
+prepend-path    LIBRARY_PATH    $topdir/lib
+prepend-path    INCDIR          $topdir/include
+prepend-path    INCLUDE         $topdir/include
+prepend-path    CPATH           $topdir/include
