@@ -7,12 +7,12 @@ call vundle#rc()
 
 " let Vundle manage Vundle
 " required!
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
 " The bundles you install will be listed ere
-Bundle 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-Bundle 'klen/python-mode'
-Bundle 'ervandew/supertab'
+Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'klen/python-mode'
+Plugin 'ervandew/supertab'
 
 " -- Useful settings --
 filetype plugin indent on
