@@ -1,9 +1,10 @@
 [user]
-        email = victor.escorcia@kaust.edu.sa
+        email = escorciav@gmail.com
         name = Victor Escorcia
 [color]
         ui = yes
 [core]
         editor = vim
+	excludesfile = ~/.gitignore
 [push]
         default = current
