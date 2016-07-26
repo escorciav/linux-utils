@@ -1,3 +1,0 @@
-#%Module1.0
-
-module use $HOME/modulefiles
