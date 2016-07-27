@@ -6,12 +6,12 @@
 # --------
 #     It might overwrite backup files.
 # """
-FILEDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+DIRNAME="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # Import utility functions
-source $FILEDIR/bash/.bashrc_functions
+source $DIRNAME/bash/.bashrc_functions
 
-for file in $FILEDIR/git/.git*; do
+for file in $DIRNAME/git/.git*; do
   home_file=$HOME/$(basename $file)
   backup_file $home_file 
   if [ -f $HOME/$file".bk" ]; then

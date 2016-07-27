@@ -6,13 +6,13 @@
 # --------
 #     It might overwrite backup files.
 # """
-FILEDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+DIRNAME="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # Import utility functions
-source $FILEDIR/bash/.bashrc_functions
+source $DIRNAME/bash/.bashrc_functions
 
 # Copy bash dotfiles in your home
-for file in $FILEDIR/bash/.bash*; do
+for file in $DIRNAME/bash/.bash*; do
   home_file=$HOME/$(basename $file)
   backup_file $home_file 
   if [ -f $HOME/$file".bk" ]; then
