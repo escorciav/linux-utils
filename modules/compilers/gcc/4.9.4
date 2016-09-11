@@ -1,0 +1,34 @@
+#%Module1.0#####################################################################
+##
+## modules compilers/gcc/4.9.4
+##
+## modulefiles/compilers/gcc/4.9.4  Written by Victor Escorcia
+##
+proc ModulesHelp { } {
+                global version modroot
+
+                        puts stderr "compilers/gcc/4.9.4 - sets the Environment for GCC 4.9.4"
+}
+
+module-whatis   "Sets the Environment for using GCC 4.9.4 compiler and libraries"
+
+# for Tcl script use only
+set     topdir          /home/escorciav/install/bin/gcc/4.9.4
+set     version         4.9.4
+set     sys             linux86
+conflict compilers/gcc
+
+prepend-path    PATH            $topdir/bin
+prepend-path    LIBRARY_PATH    $topdir/lib/gcc/x86_64-unknown-linux-gnu/lib64/4.9.4/
+prepend-path    LD_LIBRARY_PATH $topdir/lib/gcc/x86_64-unknown-linux-gnu/lib64/4.9.4/
+prepend-path    LD_LIBRARY_PATH $topdir/lib64
+prepend-path    INCDIR          $topdir/include
+prepend-path    INCLUDE         $topdir/include
+prepend-path    CPATH           $topdir/include
+prepend-path    MANPATH         $topdir/man
+prepend-path    INFOPATH        $topdir/info
+setenv          CC              $topdir/bin/gcc
+setenv          CXX             $topdir/bin/g++
+setenv          FC              $topdir/bin/gfortran
+setenv          F90             $topdir/bin/gfortran
+setenv          F77             $topdir/bin/gfortran
