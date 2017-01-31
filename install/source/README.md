@@ -1,3 +1,14 @@
+## [conda]()
+
+url: https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
+version: latest
+
+### Recipe
+
+```bash
+sh Miniconda3-latest-Linux-x86_64.sh -b -p path/to/your/installation
+```
+
 ## [openblas](http://www.openblas.net/)
 
 git_url: https://github.com/xianyi/OpenBLAS.git
