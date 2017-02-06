@@ -1,0 +1,24 @@
+#%Module1.0#####################################################################
+##
+## modules libs/nccl/1.3.2
+##
+## modulefiles/libs/nccl/1.3.2  Written by Victor Escorcia
+##
+proc ModulesHelp { } {
+  global version modroot
+  puts stderr "libs/nccl/1.3.2 - sets the Environment for NVIDIA-NCCL"
+}
+
+module-whatis "Sets the Environment for using NVIDIAL-NCCL library"
+
+# for Tcl script use only
+set     topdir          /home/escorciav/install/bin/nccl/1.3.2
+set     version         1.3.2
+set     sys             linux86
+prereq compilers/gcc/5.4.0
+prereq compilers/cuda/8.0.44
+conflict libs/nccl
+
+prepend-path    LD_LIBRARY_PATH         $topdir/lib
+prepend-path    INCDIR                  $topdir/include
+prepend-path    INCLUDE                 $topdir/include

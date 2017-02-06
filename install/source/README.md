@@ -39,3 +39,18 @@ sudo dnf install cmake curl readline-devel ncurses-devel nodejs npm czmq czmq-de
 ```
 ./install_hack.sh
 ```
+
+## [NCCL](https://github.com/NVIDIA/nccl/tree/master)
+
+git_rul: https://github.com/NVIDIA/nccl.git
+version: v1.3.0-1
+
+### Recipe
+
+```bash
+make -j 12 CUDA_HOME=/path/to/your/cuda
+```
+
+### Notes
+
+Take care of the version of gcc compiler
