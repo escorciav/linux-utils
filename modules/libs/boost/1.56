@@ -1,22 +1,21 @@
 #%Module1.0#####################################################################
 ##
-## modules tools/boost/1.56
+## modules libs/boost/1.56
 ##
-## modulefiles/tools/boost/1.56  Written by Victor Escorcia
+## modulefiles/libs/boost/1.56  Written by Victor Escorcia
 ##
 proc ModulesHelp { } {
-                global version modroot
-
-                        puts stderr "tools/boost/1.56 - sets the Environment for Boost 1.56"
+  global version modroot
+  puts stderr "libs/boost/1.56 - sets the Environment for Boost 1.56"
 }
 
 module-whatis   "Sets the Environment for using Boost 1.56 headers and libraries"
 
 # for Tcl script use only
-set     topdir          /opt/boost/1.56
+set     topdir          $::env(HOME)/install/bin/boost/1.56
 set     version         1.56
 set     sys             linux86
-conflict compilers/cuda
+conflict libs/boost
 
 prepend-path    LD_LIBRARY_PATH $topdir/lib
 prepend-path    INCDIR          $topdir/include

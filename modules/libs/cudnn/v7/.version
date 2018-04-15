@@ -1,5 +1,5 @@
 #%Module1.0#####################################################################
 ##
-## version file for cudnn-v5
+## version file for cudnn-v7
 ##
-set ModulesVersion  "1-8.0"
+set ModulesVersion  "0-9.1"

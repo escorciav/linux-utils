@@ -2,4 +2,4 @@
 ##
 ## version file for cudnn
 ##
-set ModulesVersion  "v5"
+set ModulesVersion  "v6"

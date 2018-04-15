@@ -1,0 +1,28 @@
+#%Module1.0#####################################################################
+##
+## modules libs/cudnn/v7/0-9.1
+##
+## modulefiles/libs/cudnn/v7/0-9.1  Written by Victor Escorcia
+##
+proc ModulesHelp { } {
+  global version modroot
+  puts stderr "libs/cudnn/v7/0-9.1 - sets the Environment for CUDNN v7.0 - CUDA 9.1"
+}
+
+module-whatis "Sets the Environment for using CUDNN v7.0 - CUDA 9.1 headers and library"
+
+# for Tcl script use only
+set     topdir          $::env(HOME)/install/bin/cudnn/v7.0/9.1
+set     version         v7.0-9.1
+set     sys             linux86
+prereq compilers/cuda/9.1
+conflict tools/cudnn
+
+prepend-path    LD_LIBRARY_PATH $topdir/lib64
+prepend-path    LIBRARY_PATH    $topdir/lib64
+prepend-path    INCDIR          $topdir/include
+prepend-path    INCLUDE         $topdir/include
+prepend-path    CPATH           $topdir/include
+setenv          CUDNN_ROOT      $topdir
+setenv          CUDNN_HOME      $topdir
+setenv          CUDNN_DIR       $topdir

@@ -1,25 +1,25 @@
 #%Module1.0#####################################################################
 ##
-## modules compilers/gcc/4.9.4
+## modules compilers/gcc/5.4.0
 ##
-## modulefiles/compilers/gcc/4.9.4  Written by Victor Escorcia
+## modulefiles/compilers/gcc/5.4.0  Written by Victor Escorcia
 ##
 proc ModulesHelp { } {
   global version modroot
-  puts stderr "compilers/gcc/4.9.4 - sets the Environment for GCC 4.9.4"
+  puts stderr "compilers/gcc/5.4.0 - sets the Environment for GCC 5.4.0"
 }
 
 module-whatis   "Sets the Environment for using GCC compiler and libraries"
 
 # for Tcl script use only
-set     topdir          $::env(HOME)/install/bin/gcc/4.9.4
-set     version         4.9.4
+set     topdir          $::env(HOME)/install/bin/gcc/5.4.0
+set     version         5.4.0
 set     sys             linux86
 conflict compilers/gcc
 
 prepend-path    PATH            $topdir/bin
-prepend-path    LIBRARY_PATH    $topdir/lib/gcc/x86_64-unknown-linux-gnu/lib64/4.9.4/
-prepend-path    LD_LIBRARY_PATH $topdir/lib/gcc/x86_64-unknown-linux-gnu/lib64/4.9.4/
+prepend-path    LIBRARY_PATH    $topdir/lib/gcc/x86_64-unknown-linux-gnu/lib64/5.4.0/
+prepend-path    LD_LIBRARY_PATH $topdir/lib/gcc/x86_64-unknown-linux-gnu/lib64/5.4.0/
 prepend-path    LD_LIBRARY_PATH $topdir/lib64
 prepend-path    INCDIR          $topdir/include
 prepend-path    INCLUDE         $topdir/include

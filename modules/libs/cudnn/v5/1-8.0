@@ -1,22 +1,22 @@
 #%Module1.0#####################################################################
 ##
-## modules libs/cudnn/v5/0-7.5
+## modules libs/cudnn/v5/1-8.0
 ##
-## modulefiles/libs/cudnn/v5/0-7.5  Written by Victor Escorcia
+## modulefiles/libs/cudnn/v5/1-8.0  Written by Victor Escorcia
 ##
 proc ModulesHelp { } {
   global version modroot
-  puts stderr "libs/cudnn/v5/0-7.5 - sets the Environment for CUDNN v5.0"
+  puts stderr "libs/cudnn/v5/1-8.0 - sets the Environment for CUDNN v5.1 - CUDA 8.0"
 }
 
-module-whatis   "Sets the Environment for using CUDNN v5.0 headers and library"
+module-whatis "Sets the Environment for using CUDNN v5.1 - CUDA 8.0 headers and library"
 
 # for Tcl script use only
-set     topdir          $::env(HOME)/cudnn/v5.0/7.5
-set     version         v5.0-7.5
+set     topdir          $::env(HOME)/install/bin/cudnn/v5.1/8.0
+set     version         v5.1-8.0
 set     sys             linux86
 conflict libs/cudnn
-prereq compilers/cuda/7.5
+prereq compilers/cuda/8.0
 
 prepend-path    LD_LIBRARY_PATH $topdir/lib64
 prepend-path    LIBRARY_PATH    $topdir/lib64

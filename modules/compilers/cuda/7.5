@@ -1,24 +1,24 @@
 #%Module1.0#####################################################################
 ##
-## modules compilers/cuda/6.5
+## modules compilers/cuda/7.5
 ##
-## modulefiles/compilers/cuda/6.5  Written by Victor Escorcia
+## modulefiles/compilers/cuda/7.5  Written by Victor Escorcia
 ##
 proc ModulesHelp { } {
   global version modroot
-  puts stderr "compilers/cuda/6.5 - sets the Environment for CUDA 6.5"
+  puts stderr "compilers/cuda/7.5 - sets the Environment for CUDA 7.5"
 }
 
 module-whatis   "Sets the Environment for using CUDA compiler and libraries"
 
 # for Tcl script use only
-set     topdir          $::env(HOME)/install/bin/cuda/6.5
-set     version         6.5
+set     topdir          $::env(HOME)/install/bin/cuda/7.5
+set     version         7.5
 set     sys             linux86
 conflict compilers/cuda
 
 prepend-path    PATH            $topdir/bin
-prepend-path    LD_LIBRARY_PATH $topdir/lib64
+prepend-path    LIBRARY_PATH    $topdir/lib64
 prepend-path    LD_LIBRARY_PATH $topdir/lib64
 prepend-path    INCDIR          $topdir/include
 prepend-path    INCLUDE         $topdir/include

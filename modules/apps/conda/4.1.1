@@ -1,21 +1,20 @@
 #%Module1.0#####################################################################
 ##
-## modules appss/conda/4.1.1
+## modules apps/conda/4.1.1
 ##
 ## modulefiles/apps/conda/4.1.1  Written by Victor Escorcia
 ##
 proc ModulesHelp { } {
-                global version modroot
-
-                        puts stderr "apps/conda/4.1.1 - sets the Environment for conda 4.9.4"
+  global version modroot
+  puts stderr "apps/conda/4.1.1 - sets the Environment for conda 4.1.1"
 }
 
-module-whatis   "Sets the Environment for using conda 4.1.1 package"
+module-whatis   "Sets the Environment for using miniconda package manager"
 
 # for Tcl script use only
-set     topdir          /home/escorciav/install/bin/miniconda3
+set     topdir          $::env(HOME)/install/bin/miniconda3
 set     version         4.1.1
 set     sys             linux86
-conflict tools/conda
+conflict apps/conda
 
 prepend-path    PATH            $topdir/bin
