@@ -10,7 +10,7 @@ General purpose scripts, commands, profiles and recipes used many times/machines
 
     - Follow this [help](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/).
 
-    - If security is a concern, read [this](https://developer.github.com/guides/using-ssh-agent-forwarding/) instead of using/launching ssh-agent. 
+    - If security is a concern, read [this](https://developer.github.com/guides/using-ssh-agent-forwarding/) instead of using/launching ssh-agent.
 
 2. Setup dotfiles.
 
@@ -31,3 +31,5 @@ General purpose scripts, commands, profiles and recipes used many times/machines
 Notes about programs and configurations.
 
 - [Docker](recipes/docker.md)
+
+- [vscode](recipes/vscode.md)
