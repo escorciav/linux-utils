@@ -14,21 +14,23 @@ General purpose scripts, commands, profiles and recipes used many times/machines
 
 2. Setup dotfiles.
 
-    Company, office, desktop? your computer and the shell is your real workspace. Treat it as such.
+    Company, office, desktop? the computer and the shell is my real workspace.
 
     - Clone [dotfiles](https://github.com/escorciav/linux-utils).
 
-    - Edit according to the demand of your task on that machine.
+    - Edit according to the demand of the task on that machine.
 
 3. SSH
 
-    If dealing with other computers is the butter of your bread/work. Take five minutes for this.
+    If dealing with other computers often. Take five minutes for this.
 
-    - Copy and paste [this](#.ssh/config) into `.ssh/config` in your $HOME.
+    - Copy and paste [this](#.ssh/config) into `.ssh/config` in $HOME.
 
 # Recipes
 
 Notes about programs and configurations.
+
+- [Fedora](recipes/fedora.md)
 
 - [Docker](recipes/docker.md)
 
