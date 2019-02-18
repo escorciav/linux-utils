@@ -73,3 +73,7 @@ The steps that worked for @escorciav are:
 3. Install nvidia-docker
 
     `sudo dnf install nvidia-docker2`
+
+## Interesting images
+
+- This [post](https://blog.networkprofile.org/what-docker-containers-am-i-running/) detailed a nice arragement of docker images and particular applications. From monitoring till DIY cloud of files&images (dropbox) and series/movies (netflix).
