@@ -35,3 +35,5 @@ Notes about programs and configurations.
 - [Docker](recipes/docker.md)
 
 - [vscode](recipes/vscode.md)
+
+- [tmux](recipes/tmux.md)
