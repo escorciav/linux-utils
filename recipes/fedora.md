@@ -2,45 +2,78 @@
 
 Linux OS
 
-## Setup
+## Disk partition
 
-TODO: describe partition strategy.
+1. Unplug disks except for disk for system
+
+2. Use recommended partition.
+
+    - For dual-boot with Windows, include a `/boot/efi` partition of 256MiB.
+
+  _Suggested partitions sizes_
+
+  - `/` >= 70GiB, (at least) double if you plan to use docker.
+
+  - swap == min(16GiB, system memory)
 
 ## Recommendations after install it
 
-### Add steroids
+1. Update terminal preferences
 
-```bash
-sudo dnf update
-sudo dnf install htop iotop tmux screen vim-enhanced powerline powerline-fonts tmux-powerline vim-powerline environment-modules fuse-sshfs gcc pkgconfig dkms kernel-devel kernel-headers acpid libglvnd-glx libglvnd-opengl libglvnd-devel
-```
+    - TODO
 
-- Packages from `htop` ongoing are to monitor computer load.
+2. [Set Hostname](https://www.tecmint.com/things-to-do-after-fedora-26-installation/)
 
-- Packages from `tmux` ongoing are to create persistent shell-session.
+3. Update system `sudo dnf update`
 
-- Packages from `vim-enhanced` are for code editing and beautify shell or VIM.
+4. ssh: enable it on boot and restart
 
-- Packages from `gcc` ongoing are for C/C++ development.
+    ```bash
+    sudo systemctl enable sshd
+    sudo systemctl restart sshd
+    ```
 
-- Packages from `gcc` ongoing are for C/C++ development.
+5. Add steroids
 
-- Packages from `dkms` afterwards to setup nvidia-driver.
+    ```bash
+    sudo dnf install htop iotop glances screen vim-enhanced powerline powerline-fonts tmux-powerline vim-powerline environment-modules fuse-sshfs dkms kernel-devel acpid libglvnd-glx libglvnd-opengl libglvnd-devel pv gnome-tweak-tool p7zip p7zip-plugins icedtea-web java-openjdk transmission tmux gcc pkgconfig unzip kernel-headers
+    ```
 
-- Packages to consider
+    - Packages from `htop` onward are to monitor computer load.
 
-  - `pv`: useful to keep track of things such as taring :thinking:
+    - Packages from `screen` onward are to create persistent shell-session.
 
-### ssh: enable it on boot and restart
+    - Packages from `vim-enhanced` onward for code editing and beautify shell or VIM.
 
-```bash
-sudo systemctl enable sshd
-sudo systemctl restart sshd
-```
+    - Packages from `environment-modules` is to manipulate environment variables.
 
-### VSCode
+    - Packages from `fuse-sshfs` is to mount remote filesystem via ssh.
 
-Check [this](./vscode.md).
+    - Packages from `dkms` onward to setup nvidia-driver.
+
+    - Package `pv` is progress-bar useful to keep an eye on tar/untar
+
+    - Packages from `gnome-tweak-tool` customize gnome. Display minimize in top-bar.
+
+    - Packages from `p7zip` onward are for uncompress files.
+
+    - Packages from `icedtea-web` onward are for java&web-toolkit.
+
+    - Package `transmission` is for torrents.
+
+6. [Tweak dnf](https://robbinespu.gitlab.io/blog/2019/05/06/after-install-fedora-30/)
+
+    Ignore the deltarpm.
+
+6. Install VSCode. Check [this](./vscode.md).
+
+7. Install Chrome.
+
+    > Developing websites and open awkward pages design only for Chrome.
+
+8. Install flatpack programs
+
+    VLC, slack, etc.
 
 ### Docker
 
@@ -81,3 +114,11 @@ OSError: [Errno 28] No space left on deviceYou may need to increase the inotify 
 - The best [guide](https://ask.fedoraproject.org/en/question/87205/how-do-i-install-a-src-rpm-with-dnf/) to compile RPMs as non-root user.
 
   I would just add that you can replace gcc by the specs-file (with `.specs` extension) for the step `sudo dnf builddep gcc`
+
+# Other extensions
+
+TODO: review them
+
+- For [Gnome](https://www.dedoimedo.com/computers/fedora-30-after-install.html)
+
+- For [firefox](https://fosspost.org/tutorials/things-to-do-after-installing-fedora)

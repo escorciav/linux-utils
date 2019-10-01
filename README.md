@@ -14,11 +14,9 @@ General purpose scripts, commands, profiles and recipes used many times/machines
 
 2. Setup dotfiles.
 
-    Company, office, desktop? the computer and the shell is my real workspace.
+    Company, office, desktop? the computer and the shell is another workspace.
 
-    - Clone [dotfiles](https://github.com/escorciav/linux-utils).
-
-    - Edit according to the demand of the task on that machine.
+    - Follow steps [here](https://github.com/escorciav/linux-utils/tree/master/dotfiles).
 
 3. SSH
 
