@@ -65,13 +65,49 @@ Linux OS
 
     Ignore the deltarpm.
 
-6. Install VSCode. Check [this](./vscode.md).
+7. Tweak Gnome
+
+    - Open `Tweaks`
+    
+    - Enable maximize and minimize button: Go to Window Titlebar 😉 
+
+7. Install VSCode. Check [this](./vscode.md).
+
+7. Enable video support. Reuqired for firefox
+
+    - Add RPMFusion repo
+  
+      ```bash
+      sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+      sudo dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+      ```
+  
+    - Add gstreamer and ffmpeg.
+  
+      ```bash
+      sudo dnf install \
+          gstreamer-plugins-base \
+          gstreamer1-plugins-base \
+          gstreamer-plugins-bad \
+          gstreamer-plugins-ugly \
+          gstreamer1-plugins-ugly \
+          gstreamer-plugins-good-extras \
+          gstreamer1-plugins-good \
+          gstreamer1-plugins-good-extras \
+          gstreamer1-plugins-bad-freeworld \
+          ffmpeg \
+          gstreamer-ffmpeg
+      ```
+
+      TODO: are all this required?
+
+    Credits: [Robbi](https://robbinespu.gitlab.io/blog/2019/05/06/after-install-fedora-30/)
 
 7. Install Chrome.
 
     > Developing websites and open awkward pages design only for Chrome.
 
-8. Install flatpack programs
+7. Install flatpack programs
 
     VLC, slack, etc.
 
