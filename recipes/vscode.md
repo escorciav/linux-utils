@@ -14,15 +14,35 @@ Developer editor almost like an IDE.
 
 - Docker@Microsoft
 
+- Remote SSH@Microsoft
+
 - Visual Studio IntelliCode@Microsoft DevLabs
 
-- Jupyter Notebook Previewer@jithurjacob
+- Markdown Preview Github Styling
 
-  Double check if Python@Microsoft extension doesn't include the preview feature.
+- Rainbow CSV
 
 ## Settings
 
 - Disable telemetry
+
+- Files: Trim Trailing Whitespace -> True
+
+- Files: Insert Final Newline -> True
+
+- Files: Trim Final Newlines -> True
+
+- Editors rules
+
+```
+"[git-commit]": {"editor.rulers": [50]},
+"[python]": {
+    "editor.rulers": [
+        79,
+        120
+    ]
+}
+```
 
 ## Suggested readings
 
