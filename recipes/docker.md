@@ -77,3 +77,12 @@ The steps that worked for @escorciav are:
 ## Interesting images
 
 - This [post](https://blog.networkprofile.org/what-docker-containers-am-i-running/) detailed a nice arragement of docker images and particular applications. From monitoring till DIY cloud of files&images (dropbox) and series/movies (netflix).
+
+## "Debug" building of a picky image
+
+If we need to step-in at any moment of the building:
+
+1 . search the image-hash of the previous successful step.
+
+2. Launch a container using that image hash in interactive mode. 
+
