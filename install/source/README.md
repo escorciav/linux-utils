@@ -3,11 +3,15 @@
 url: https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
 version: latest
 
-### Recipe
+### Setup
 
 ```bash
-sh Miniconda3-latest-Linux-x86_64.sh -b -p path/to/your/installation
+wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
+sh Miniconda3-latest-Linux-x86_64.sh -b -p $USER_HOME/miniconda3
+echo TODO conda-init, issues with bashrc
 ```
+
+Miniconda will be installed in $USER_HOME/miniconda3 :)
 
 ## [openblas](http://www.openblas.net/)
 
