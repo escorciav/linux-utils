@@ -17,3 +17,13 @@ Allocate source code, executables packing code & binaries, etc.
 2. [bin](bin/README.md)
 
 Allocate binaries after compiling the source code
+
+## HowTo
+
+1. If not done yet, setup the [bash dotfiles](../dotfiles), and reload the shell.
+
+    You can verify that by doing `echo $USER_HOME` if it does not print a path. You must do it.
+
+1. Go here [source](source/README.md)
+
+    Follow the instructions for each app/program/whatever-you-wanna-call-it.
