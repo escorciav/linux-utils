@@ -8,10 +8,13 @@ version: latest
 ```bash
 wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
 sh Miniconda3-latest-Linux-x86_64.sh -b -p $USER_HOME/miniconda3
-echo TODO conda-init, issues with bashrc
+cd $USER_LOCAL/miniconda3
+echo WIP, due to conflict with bashrc_export steps printed but you must do it and fix issue
+echo Type: ./conda init
+echo Go to .bashrc and fix the issue associated with our if statement before (intrusive) conda does its job
 ```
 
-Miniconda will be installed in $USER_HOME/miniconda3 :)
+Miniconda will be installed in $USER_LOCAL/miniconda3 :)
 
 ## [openblas](http://www.openblas.net/)
 
