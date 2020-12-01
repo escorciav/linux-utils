@@ -35,3 +35,5 @@ Notes about programs and configurations.
 - [vscode](recipes/vscode.md)
 
 - [tmux](recipes/tmux.md)
+
+- [unix/terminal](recipes/unix.md)
