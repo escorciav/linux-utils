@@ -106,7 +106,7 @@ There must be moany websites about this but [**this**](https://rc.fas.harvard.ed
 
 Written while I was KAUST.
 
-# GPU device ID
+### GPU device ID
 
 It seems that SLURM takes care of setting `CUDA_VISIBLE_DEVICES` properly for you, thus you don't have to worry about that. AFAIK, it uses 0 indexed notation. If you request 1 GPU, your device will be the number `0`. You got the pattern, right? if not feel free to ask :wink: .
 
