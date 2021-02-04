@@ -44,6 +44,24 @@ Developer editor almost like an IDE.
 }
 ```
 
+## Tricks
+
+### Weak internet connection - remote ssh
+
+Are you using the MS-remote-ssh extension, but your internet connection is intermittent?
+
+Do you experience a lot of reconnection when using MS-Python-extension?
+
+Solution: Add this to your `settings.json`
+
+```json
+{
+  "python.terminal.activateEnvironment": false,
+}
+```
+
+Credits: Abhinav Mehrotra & Lukasz Dudziak. TODO: ref vscode issue.
+
 ## Suggested readings
 
 - Opinion, auto-setup and extensions [here](https://fredrikaverpil.github.io/2017/02/02/my-vscode-setup/). 👍 @ModarTensai.
