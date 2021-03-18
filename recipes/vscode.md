@@ -62,6 +62,10 @@ Solution: Add this to your `settings.json`
 
 Credits: Abhinav Mehrotra & Lukasz Dudziak. TODO: ref vscode issue.
 
+### Too many files in project folder
+
+Sometimes I add simlinks into my project folders with a bunch of files (images, videos, etc.). If so, you will eventuall get a pop-up complaining about it. It will send you [here](https://code.visualstudio.com/docs/setup/linux#_visual-studio-code-is-unable-to-watch-for-file-changes-in-this-large-workspace-error-enospc)
+
 ## Suggested readings
 
 - Opinion, auto-setup and extensions [here](https://fredrikaverpil.github.io/2017/02/02/my-vscode-setup/). 👍 @ModarTensai.
