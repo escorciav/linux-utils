@@ -11,9 +11,9 @@ fi
 
 # OPENBLAS
 # Uncomment following lines to setup max number of threads by default
-export OPENBLAS_NUM_THREADS=48
-export GOTO_NUM_THREADS=48
-export OMP_NUM_THREADS=48
+# export OPENBLAS_NUM_THREADS=48
+# export GOTO_NUM_THREADS=48
+# export OMP_NUM_THREADS=48
 
 # My own variables
 USER_LOCAL=$HOME/install/bin
@@ -24,3 +24,28 @@ USER_LOCAL=$HOME/install/bin
 # Hard-coding style uncomment the following lines
 #export PATH=$USER_LOCAL/cuda/7.5/bin:$PATH
 #export LD_LIBRARY_PATH=$USER_LOCAL/cuda/7.5/lib64:$LD_LIBRARY_PATH
+
+# colored GCC warnings and errors
+export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+
+# Android Studio SDK, cmdline-tools, and ndk
+export ANDROID_SDK=$USER_LOCAL/android/sdk
+export PATH=$ANDROID_SDK/platform-tools:$PATH
+# export PATH=$ANDROID_SDK/tools:$PATH # not found when using android_studio
+# export PATH=$ANDROID_SDK/bin:$PATH # not found when using android_studio
+export PATH=$ANDROID_SDK/cmdline-tools/latest/bin:$PATH
+export NDK_HOME=$ANDROID_SDK/ndk/25.2.9519653
+export ANDROID_NDK_ROOT=$NDK_HOME
+export ANDROID_NDK=$NDK_HOME  # Blame: Executorch+QNN
+export PATH=$NDK_HOME:$PATH
+
+# QNN, SNPE, etc. Folder formatted to use with AutoCaML 🤖⚙️
+export QNN_SDK_ROOT=$USER_LOCAL/qnn/qnn-v2.19.0.240124
+export SNPE_SDK_ROOT=$USER_LOCAL/snpe/2.19.0.240124
+export SNPE_PYTHON=$USER_LOCAL/miniconda3/envs/qnn/bin/python
+export QNN_PYTHON=$SNPE_PYTHON
+# export SNPE_ROOT=$USER_LOCAL/snpe/2.10.0.4541
+
+# Rust
+# https://www.digitalocean.com/community/tutorials/install-rust-on-ubuntu-linux
+# source $HOME/.cargo/env
