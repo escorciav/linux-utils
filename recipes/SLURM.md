@@ -50,6 +50,27 @@ TODO: explain what all those `%?` means. low-priority in favor of using [this](h
 
 `scontrol -o show node`
 
+### All in all
+
+```bash
+# poll slurm daemon
+freq_sec=60  
+while true; do
+    date
+    sinfo -o "%.11n %.10A %.10D %.10P %.10T %.10c %.10z %.10m %.10d %.10w %.10f %.10G"
+    squeue -o "%.15u %.8i %.4t %.10b %.11N %.20S %.20e %.15P %.15Q %.10G"
+    printf "\n# Storage\n"
+    df -h | grep -v '/run/user/'
+    sleep $freq_sec;
+done
+# squeue -o "%.8u %.5i %.4t %.5b %.10N %.20S %.20e"
+
+# CPU work
+# srun --partition=long --cpus-per-task=4 --pty bash -l
+# GPU work
+# srun --partition=long --gres=gpu:8 --cpus-per-task=4 --pty bash -l
+```
+
 ## Control execution of your jobs
 
 ### Cancel jobs
